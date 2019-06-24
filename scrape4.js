@@ -5,20 +5,21 @@ const browser = puppeteer.launch(
   {timeout:20000, args:['--aggressive-cache-discard','--disable-cache', '--disable-application-cache']}
 );
 
-if (process.argv.length !== 3) {
-  console.error('Enter Output File Name: (1 Argument)');
+if (process.argv.length !== 4) {
+  console.error('Enter Input and Output (2 arguments)');
   process.exit(1);
 }
 else {
-	fileName = String(process.argv[2]);
+	input = String(process.argv[2])
+	fileName = String(process.argv[3]);
 }
 
+var hostFile = fs.readFileSync(input, 'utf8').split("BREAK_SIG");
+var data = JSON.parse(hostFile);
 
 var log = [];
-const links = require('./fox.js');
 
-
-var articles = links.foxnews;
+var articles = data;
 var progress = 0;
 
 function record(url) {
