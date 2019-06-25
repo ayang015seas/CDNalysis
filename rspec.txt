@@ -1,11 +1,11 @@
 <rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
-  <node client_id="vm" exclusive="false">
+  <node client_id="vm" exclusive="false" component_manager_id="urn:publicid:IDN+instageni.hawaii.edu+authority+cm">
     <sliver_type name="emulab-xen">
       <emulab:xen cores="4" disk="8" ram="1024"/>
       <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD"/>
     </sliver_type>
     <emulab:routable_control_ip/>
-    <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
     <services xmlns="http://www.geni.net/resources/rspec/3"/>
+    <hardware_type xmlns="http://www.geni.net/resources/rspec/3" name="bridge"/>
   </node>
 </rspec>
