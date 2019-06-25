@@ -2,7 +2,10 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 
 const browser = puppeteer.launch(
-  {timeout:20000, args:['--aggressive-cache-discard','--disable-cache', '--disable-application-cache']}
+  {devtools: true,
+  	timeout:20000, headless: true,
+  	args:['--disable-extensions-except=adblock-unpacked',
+                  '--load-extension=adblock-unpacked/','--aggressive-cache-discard','--disable-cache', '--disable-application-cache']}
 );
 
 if (process.argv.length !== 4) {
