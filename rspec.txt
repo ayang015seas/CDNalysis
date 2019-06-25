@@ -6,6 +6,5 @@
     </sliver_type>
     <emulab:routable_control_ip/>
     <services xmlns="http://www.geni.net/resources/rspec/3"/>
-    <hardware_type xmlns="http://www.geni.net/resources/rspec/3" name="bridge"/>
   </node>
 </rspec>
