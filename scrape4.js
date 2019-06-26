@@ -70,7 +70,7 @@ function record(url) {
 
 			
 			page.on('pageerror', (err) => {
-				console.log("Page Error");
+				console.log("-- WARN: Page JavaScript Error --");
 			});
 
 		try {
