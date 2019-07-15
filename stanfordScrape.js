@@ -85,6 +85,39 @@ var articles = [
 "https://www.stanforddaily.com/2019/05/07/letter-to-the-community-summer-break-is-time-for-sworn-to-refuse/",
 "https://www.stanforddaily.com/2019/05/07/it-crossed-the-line/",
 "https://www.stanforddaily.com/2019/05/06/op-ed-stanford-jewish-voice-for-peaces-statement-on-eli-valley-art-exhibition/",
+"https://www.stanforddaily.com/2019/06/05/stanford-spoken-word-collective-shines-at-cupsi/",
+"https://www.stanforddaily.com/2019/06/03/a-beautiful-look-at-the-life-of-carole-king/",
+"https://www.stanforddaily.com/2019/05/25/the-manic-monologues-tells-stories-of-pain-and-resilience/",
+"https://www.stanforddaily.com/2019/05/21/two-freshmen-combat-stereotypes-about-masculinity-in-new-podcast-really-bro/",
+"https://www.stanforddaily.com/2019/05/20/in-taps-cabaret-even-the-orchestra-is-beautiful/",
+"https://www.stanforddaily.com/2019/05/17/stanford-students-make-calico-cards-unique-watercolor-kits-for-fans-of-crafts/",
+"https://www.stanforddaily.com/2019/05/13/a-delightful-storytelling-evening-with-madeline-miller/",
+"https://www.stanforddaily.com/2019/04/26/the-addams-family-is-crazy-kooky-and-compelling/",
+"https://www.stanforddaily.com/2019/04/25/svsa-culture-night-celebrates-customs-and-creates-community/",
+"https://www.stanforddaily.com/2019/04/15/the-addams-family-is-a-macabre-marvel/",
+"https://www.stanforddaily.com/2019/04/11/new-cantor-exhibitions-inspire-thought-and-awe-in-viewers/",
+"https://www.stanforddaily.com/2019/04/10/belfast-and-brexit-in-between-two-worlds/",
+"https://www.stanforddaily.com/2019/04/09/meredith-monks-cellular-songs-and-ways-of-living/",
+"https://www.stanforddaily.com/2019/04/09/meredith-monks-cellular-songs-and-ways-of-living/",
+"https://www.stanforddaily.com/2019/04/09/meredith-monks-cellular-songs-and-ways-of-living/",
+"https://www.stanforddaily.com/2019/04/09/meredith-monks-cellular-songs-and-ways-of-living/",
+"https://www.stanforddaily.com/2019/03/13/in-the-heights-is-a-stunning-debut-from-latinx-in-theater/",
+"https://www.stanforddaily.com/2019/03/08/making-lin-manuel-mirandas-music-soar-in-in-the-heights/",
+"https://www.stanforddaily.com/2019/03/05/the-harmonics-melodiously-muse-on-the-mood-of-winter-quarter/",
+"https://www.stanforddaily.com/2019/03/04/stegner-fellows-gothataone-meong-and-monica-sok-read-poetry-and-prose-to-a-packed-room/",
+"https://www.stanforddaily.com/2019/03/01/dont-tell-comedy-provides-an-inventive-twist-on-the-comedy-club-formula/",
+"https://www.stanforddaily.com/2019/02/28/stanford-live-partners-with-stand-up-d-to-bring-jenny-zigrino-to-campus/",
+"https://www.stanforddaily.com/2019/02/26/music-made-our-hearts-beat-at-mixed-companys-love-sucks/",
+"https://www.stanforddaily.com/2019/02/22/a-midsummer-nights-dream-delves-into-the-trials-of-love-through-fantasy/",
+"https://www.stanforddaily.com/2019/02/20/stegner-fellows-neha-chaudhary-kamdar-and-jay-deshpande-entrance-and-move-listeners/",
+"https://www.stanforddaily.com/2019/02/06/maggie-nelson-shatters-categories-and-defies-expectations-with-new-writing/",
+"https://www.stanforddaily.com/2019/02/06/spotifys-new-block-feature-is-worse-than-useless/",
+"https://www.stanforddaily.com/2019/02/04/avenue-q-brings-laughs-to-the-bay-area/",
+"https://www.stanforddaily.com/2019/02/01/a-masterful-interplay-of-music-and-acting-in-a-little-night-music/",
+"https://www.stanforddaily.com/2019/01/31/curators-alex-fialho-and-melissa-levin-on-rediscovering-michael-richards-work/",
+"https://www.stanforddaily.com/2019/01/28/sf-sketchfest-brings-great-comedy-to-the-bay/",
+"https://www.stanforddaily.com/2019/01/25/performed-live-tony-award-winning-musical-dear-evan-hansen-is-a-complete-artistic-disappointment/",
+"https://www.stanforddaily.com/2019/01/22/sf-playhouses-mary-poppins-is-practically-perfect/"
 ]
 
 var progress = 0;
@@ -140,7 +173,7 @@ function record(url) {
 		try {
 			await page.setRequestInterception(true);
             await page.goto(url, {
-	      	waitUntil: 'networkidle2', timeout: 30000
+	      	waitUntil: 'networkidle0', timeout: 30000
 	    	});
 		}
 		catch (err) {
