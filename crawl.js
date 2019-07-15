@@ -2,10 +2,9 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 
 const browser = puppeteer.launch(
-  {devtools: true,
+  {
   	timeout:20000, headless: false,
-  	args:['--disable-extensions-except=adblock-unpacked',
-                  '--load-extension=adblock-unpacked/','--aggressive-cache-discard','--disable-cache', '--disable-application-cache']}
+  	args:['--aggressive-cache-discard','--disable-cache', '--disable-application-cache']}
 );
 
 if (process.argv.length !== 4) {
@@ -76,7 +75,7 @@ function record(url) {
 		try {
 			await page.setRequestInterception(true);
             await page.goto(url, {
-	      	waitUntil: 'networkidle0', timeout: 60000
+	      	waitUntil: 'networkidle0', timeout: 30000
 	    	});
 		}
 		catch (err) {
