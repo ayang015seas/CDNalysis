@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const browser = puppeteer.launch(
   {devtools: true,
-  	timeout:20000, headless: true,
+  	timeout:20000, headless: false,
   	args:['--disable-extensions-except=adblock-unpacked',
                   '--load-extension=adblock-unpacked/','--aggressive-cache-discard','--disable-cache', '--disable-application-cache']}
 );
@@ -76,7 +76,7 @@ function record(url) {
 		try {
 			await page.setRequestInterception(true);
             await page.goto(url, {
-	      	waitUntil: 'networkidle2', timeout: 30000
+	      	waitUntil: 'networkidle0', timeout: 30000
 	    	});
 		}
 		catch (err) {
