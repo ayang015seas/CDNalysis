@@ -76,7 +76,7 @@ function record(url) {
 		try {
 			await page.setRequestInterception(true);
             await page.goto(url, {
-	      	waitUntil: 'networkidle0', timeout: 30000
+	      	waitUntil: 'networkidle0', timeout: 60000
 	    	});
 		}
 		catch (err) {
