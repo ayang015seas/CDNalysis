@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 
 const browser = puppeteer.launch(
-  {devtools: true,
+  {
   	timeout:20000, headless: true,
   	args:['--disable-extensions-except=adblock-unpacked',
                   '--load-extension=adblock-unpacked/','--aggressive-cache-discard','--disable-cache', '--disable-application-cache']}
